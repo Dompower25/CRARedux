@@ -25,6 +25,10 @@ body {
   }
 
 }
+.likesBox {
+  display: flex;
+  justify-content: space-between;
+}
 
 .recipeBlock { 
   width: 100%;

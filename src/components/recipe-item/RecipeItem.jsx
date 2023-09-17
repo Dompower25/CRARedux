@@ -1,13 +1,14 @@
-import { useSelector } from "react-redux"
-import { useActions } from "../../hooks/useActions"
+import { useSelector } from "react-redux";
+import { useActions } from "../../hooks/useActions";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
-const RecipeItem = ({recipe}) => {
+const RecipeItem = ({ recipe }) => {
 
-const {favorites} = useSelector(state => state)
+    const { favorites, likes } = useSelector(state => state)
 
-const {toggleFavorites} = useActions()
- 
-const isExist = favorites.some((fov) => fov.id === recipe.id)
+    const { toggleFavorites, addLike, disLike } = useActions()
+
+    const isExist = favorites.some((fov) => fov.id === recipe.id)
 
     return (
         <div className="recipeItem">
@@ -15,6 +16,16 @@ const isExist = favorites.some((fov) => fov.id === recipe.id)
                 {recipe.name}
             </h2>
             <button onClick={() => toggleFavorites(recipe)} className={isExist ? "btnAdd" : "btnFavorites"}>{isExist ? `Remove from` : `Add to`} favorites</button>
+            <div className="likesBox">
+                <button className="btnFavorites" onClick={() => addLike()}>
+                    <AiFillHeart />
+                    {likes.length}
+                </button>
+                <button className="btnFavorites" onClick={() => disLike()}>
+                    <AiOutlineHeart />
+                </button>
+            </div>
+
         </div>
     )
 
