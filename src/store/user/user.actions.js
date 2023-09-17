@@ -5,7 +5,7 @@ const fetchUserById = (userId) =>
         {
             id: 1, name: "John",
         }
-        
+
     ), 1000))
 
 
@@ -16,6 +16,16 @@ export const getUserById = createAsyncThunk("users/by-id",
             return response
         } catch (error) {
             thunkApi.rejectWithValue(error)
+        }
+    }
+)
+
+export const getIserByName = createAsyncThunk("user/by-name",
+    async (urerName, thunkApi) => {
+        try {
+
+        } catch {
+
         }
     }
 )
