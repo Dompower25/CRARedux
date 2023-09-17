@@ -5,29 +5,29 @@ import User from './components/user/User'
 
 function App() {
 
-  
+
 
   return (
     <section>
       <header>
         <User />
       </header>
- 
-    <div className='recipeBlock'>
 
-      <RecipeItem recipe={{
-        id: 1,
-        name: "Pork stake",
-      }}/>
-       <RecipeItem recipe={{
-        id: 2,
-        name: "Pasta",
-      }}/>
-       <RecipeItem recipe={{
-        id: 3,
-        name: "Octopus",
-      }}/>
-    </div>
+      <div className='recipeBlock'>
+
+        <RecipeItem recipe={{
+          id: 1,
+          name: "Pork stake",
+        }} />
+        <RecipeItem recipe={{
+          id: 2,
+          name: "Pasta",
+        }} />
+        <RecipeItem recipe={{
+          id: 3,
+          name: "Octopus",
+        }} />
+      </div>
     </section>
   )
 }
