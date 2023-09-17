@@ -5,7 +5,7 @@ const User = () => {
 
     const {isLoading, error, user} = useSelector(state => state.user)
 
-    const {getUserById} = useActions()
+    const {getUserById, getIserByName} = useActions()
 
 
 

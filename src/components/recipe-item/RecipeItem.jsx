@@ -17,11 +17,11 @@ const RecipeItem = ({ recipe }) => {
             </h2>
             <button onClick={() => toggleFavorites(recipe)} className={isExist ? "btnAdd" : "btnFavorites"}>{isExist ? `Remove from` : `Add to`} favorites</button>
             <div className="likesBox">
-                <button className="btnFavorites" onClick={() => addLike()}>
+                <button className="btnFavorites" onClick={() => addLike("LIKE")}>
                     <AiFillHeart />
                     {likes.length}
                 </button>
-                <button className="btnFavorites" onClick={() => disLike()}>
+                <button className="btnFavorites" onClick={() => disLike('DISLIKE')}>
                     <AiOutlineHeart />
                 </button>
             </div>

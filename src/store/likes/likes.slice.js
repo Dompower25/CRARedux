@@ -7,11 +7,12 @@ export const likesSlice = createSlice(
     name: "likes",
     initialState: [],
     reducers: {
-        addLike: (state) => {
-            state.push(1)
+        addLike: (state, action) => {
+            console.log(action.payload)
         },
-        disLike: (state) => {
-            state.splice(0,1)
+        disLike: (state, action) => {
+            console.log(action.payload)
+
         }
     }
 }
